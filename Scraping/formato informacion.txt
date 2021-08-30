@@ -1,0 +1,64 @@
+{
+'id': 227, 
+'name': 'kit de monitoreo para colmenas', 
+'slug': 'kit-de-monitoreo-para-colmenas', 
+'description': 'vendo kit de monitoreo de colmenas', 
+'price': 0, 
+'store_id': 98, 
+'avatar_url': '/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcWdLIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8ec9e02c3f849a3d1a64cb363c2b239e5cf7383d/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RTNKbGMybDZaVjkwYjE5bWFXeHNXd2RwQWl3QmFRSXNBVG9NWjNKaGRtbDBlVWtpQzBObGJuUmxjZ1k2QmtWVU9ndGxlSFJsYm5SSklnd3pNREI0TXpBd0Jqc0lWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--e2dbe50542ebcaba8a130f4c07466db74adc28df/beewaze.png', 
+'formatted_price': '$0', 
+'large_description': '<div>kit de monitoreo de colmenas, monitoreo peso, humedad, temperatura al interior de la colmena. Variables climáticas al exterior de la colmena.<br>www.beewaze.com</div>', 
+'sellable': False, 
+'nostock': False, 
+'active_discount': False, 
+'discount_price': None, 
+'formatted_discount_price': None, 
+'nested_categories': [{'id': 101}, {'id': 106}], 
+'store': {
+    'id': 98, 
+    'the_name': 'riverambiente', 
+    'what_we_do': 'asesorias, auditorias, planes de cumplimiento, Declaraciones de Impacto Ambiental, pertinencias, uso de plataformas, permisos sectoriales principalmente en el area ambiental..tambien en alianza con Beewaze monitoreamos colmenas', 
+    'lat': '-35.4201610691975', 
+    'lng': '-71.62073126406251', 
+    'delivery': False, 
+    'website': 'www.riverambiente.cl', 
+    'address': None, 
+    'escaped_address': None, 
+    'contact_phone': '98703044', 
+    'contact_email': 'riverambiente@gmail.com', 
+    'instagram': 'riverambiente', 
+    'facebook': 'riverambiente consultores', 
+    'twitter': None, 
+    'banner': '/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBRQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5ee8554eee0a12afb80dae4a8634de26014e732e/logo%20con%20web%202.png', 
+    'logo': '/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBQdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2452b34ee0ea18df5564ba67f727d8f5c61c0d23/logo%2520con%2520web%25202.png', 
+    'seller': False, 
+    'banner_thumbnail': '/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBRQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5ee8554eee0a12afb80dae4a8634de26014e732e/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RTNKbGMybDZaVjkwYjE5bWFXeHNXd2RwQWl3QmFRR1dPZ3huY21GMmFYUjVTU0lMUTJWdWRHVnlCam9HUlZRNkMyVjRkR1Z1ZEVraURETXdNSGd4TlRBR093aFUiLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--319a92769c6cca7b6fce0d9fd3aa6ead45df3004/logo%20con%20web%202.png', 
+    'logo_thumbnail': '/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBQdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2452b34ee0ea18df5564ba67f727d8f5c61c0d23/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RTNKbGMybDZaVjkwYjE5bWFXeHNXd2RwUzJsTE9neG5jbUYyYVhSNVNTSUxRMlZ1ZEdWeUJqb0dSVlE2QzJWNGRHVnVkRWtpQ2pjd2VEY3dCanNJVkE9PSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--e39933456549a35f01f4dec1eb329cde79012570/logo%20con%20web%202.png', 
+    'excerpt': 'asesorias, auditorias, planes de cumplimiento, Declaraciones de...', 
+    'district': {
+        'id': 20, 
+        'name': 'Talca', 
+        'slug': None
+    }, 
+    'scategories': 
+        [
+            {
+                'id': 48, 
+                'name': 'Servicios Profesionales', 
+                'created_at': '2020-04-16T01:12:07.305Z', 
+                'updated_at': '2020-04-16T01:12:15.115Z', 
+                'parent_id': None, 'root': True, 'depth': 0
+            }
+        ]
+    }, 
+'pcategories': 
+    [
+        {
+            'id': 106, 
+            'name': 'Insumos Agroganaderos', 
+            'slug': 'insumos-agroganaderos', 
+            'thumb': '/assets/defaults/default_square-13b84d5267d9143ade17ee6a9fe9c7f1368eddf13588320ce0039f60c3ef661f.png', 
+            'icon': '/assets/defaults/default_square-13b84d5267d9143ade17ee6a9fe9c7f1368eddf13588320ce0039f60c3ef661f.png'
+        }
+    ]
+}
