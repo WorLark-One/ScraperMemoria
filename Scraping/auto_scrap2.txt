@@ -1,1 +1,1 @@
-"C:\Program Files\Python39\python.exe" "C:\Users\WorLark\PycharmProjects\Scraping\scrap2.py"
+"C:\Program Files\Python39\python.exe" "D:\NewEscritorio\memoria\ScraperMemoria\Scraping\scrap2.py"

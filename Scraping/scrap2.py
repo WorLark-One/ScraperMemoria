@@ -4,7 +4,7 @@ import requests
 import json
 import time
 
-ubicacionD = "C:/Users/WorLark/PycharmProjects/Scraping/chromedriver.exe"  # Ruta del driver
+ubicacionD = "D:/NewEscritorio/memoria/ScraperMemoria/Scraping/chromedriver.exe"  # Ruta del driver
 driver = webdriver.Chrome(ubicacionD)
 home_link = "https://www.marketmaule.cl/"
 home_link2 = "https://www.marketmaule.cl"
@@ -12,10 +12,10 @@ marketPlaceFinal = "marketmaule"
 search_link = 'alimentos-y-bebidas'
 categorias = ['agro', 'alimentos-y-bebidas', 'celulares-y-telefonia', 'computacion', 'electronica-audio-y-video', 'camaras-y-accesorios', 'electrodomesticos', 'artesania', 'autos-motos-y-otros', 'consolas-y-videojuegos', 'juegos-y-juguetes', 'libros-revistas-y-comics', 'hogar-y-muebles', 'herramientas-y-construccion', 'animales-y-mascotas', 'belleza-y-cuidado-personal', 'deportes-y-fitness', 'vestuario-y-calzado', 'relojes-y-joyas', 'arte-libreria-y-cordoneria', 'antiguedades-y-colecciones', 'bebes', 'bebidas/vinos-y-espumantes', 'bebidas/bebidas-blancas-y-licores', 'bebidas/cervezas']
 post = 'http://localhost:8000/api/public/postProducto'
-
+inicio = time.time()
 for cat in categorias:
     driver.get(home_link + cat)
-    previous_height = driver.execute_script('return document.body.scrollHeight')
+    """previous_height = driver.execute_script('return document.body.scrollHeight')
     while True:
         driver.execute_script('window.scrollTo(0, document.body.scrollHeight);')
         time.sleep(2)
@@ -23,7 +23,7 @@ for cat in categorias:
         if new_height == previous_height:
             break
         previous_height = new_height
-    time.sleep(1)
+    time.sleep(1)"""
     page = BeautifulSoup(driver.page_source, 'html.parser')
     page1 = page.find('div', attrs={'data-react-class': 'views/products/ProductsIndex'})
     obj = page1['data-react-props']
@@ -81,8 +81,9 @@ for cat in categorias:
             "marketplace": marketPlaceFinal
         }
         #print(data);
-        time.sleep(1)
+        time.sleep(0.5)
         resp = requests.post(post, json=data)
         print(resp.json())
 driver.close()
-
+fin = time.time()
+print((fin-inicio)/60)

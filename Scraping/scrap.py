@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 from selenium import webdriver
-import requests
 from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -10,7 +9,7 @@ from selenium.webdriver.common.by import By
 import time
 import sys 
 
-ubicacionD = "C:/Users/WorLark/PycharmProjects/Scraping/chromedriver.exe" 
+ubicacionD = "D:/NewEscritorio/memoria/ScraperMemoria/Scraping/chromedriver.exe"
 driver = webdriver.Chrome(ubicacionD)
 home_link = "https://comunidadc.cl"
 search_link = '/vitrina/?_p=1&rows=&nombre=&idEmp=&catego=idReg%3B7&_o='
@@ -24,7 +23,7 @@ post = 'http://localhost:8000/api/public/postProducto'
 page = BeautifulSoup(driver.page_source, 'html.parser')
 #print(page)
 pg_amount = 1
-
+inicio = time.time()
 for i in range(0, pg_amount):
     contador = 0
     for bloque in page.findAll('div', attrs={'class': 'vab-prod-ficha-mini'}):
@@ -129,7 +128,7 @@ for i in range(0, pg_amount):
             "link": linkFinal,
             "marketplace": marketPlaceFinal
         }
-        time.sleep(1)
+        time.sleep(0.5)
         resp = requests.post(post, json=data)
         print(resp.json())
         """
@@ -165,6 +164,8 @@ for i in range(0, pg_amount):
     #WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH,"//a[@class='page-link' and @id='bot-siguiente']"))).click()
 
 driver.close()
+fin = time.time()
+print((fin-inicio))
 """product_list = pd.DataFrame({
     'ID': product_id,
     'Titulo': product_title,
@@ -174,6 +175,6 @@ driver.close()
     'Ubicación': product_location,
     'Link': product_link
 })"""
-sys.exit()
+
 #print(product_list)
 #product_list.to_csv(r'lista_prueba.csv', index=False, header=True, encoding='utf-8-sig')
