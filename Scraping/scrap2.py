@@ -82,8 +82,25 @@ for cat in categorias:
         }
         #print(data);
         time.sleep(0.5)
-        resp = requests.post(post, json=data)
-        print(resp.json())
+        try:
+            resp = requests.post(post, json=data)
+            print(resp.json())
+        except requests.ConnectionError as e:
+            print("OOPS!! Connection Error. Make sure you are connected to Internet. Technical Details given below.\n")
+            print(str(e))
+            continue
+        except requests.Timeout as e:
+            print("OOPS!! Timeout Error")
+            print(str(e))
+            continue
+        except requests.RequestException as e:
+            print("OOPS!! General Error")
+            print(str(e))
+            continue
+        except requests.HTTPError as e:
+            print("OOPS!! HTTP Error")
+            print(str(e))
+            continue
 driver.close()
 fin = time.time()
 print((fin-inicio)/60)

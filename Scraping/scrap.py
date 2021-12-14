@@ -129,8 +129,25 @@ for i in range(0, pg_amount):
             "marketplace": marketPlaceFinal
         }
         time.sleep(0.5)
-        resp = requests.post(post, json=data)
-        print(resp.json())
+        try:
+            resp = requests.post(post, json=data)
+            print(resp.json())
+        except requests.ConnectionError as e:
+            print("OOPS!! Connection Error. Make sure you are connected to Internet. Technical Details given below.\n")
+            print(str(e))
+            continue
+        except requests.Timeout as e:
+            print("OOPS!! Timeout Error")
+            print(str(e))
+            continue
+        except requests.RequestException as e:
+            print("OOPS!! General Error")
+            print(str(e))
+            continue
+        except requests.HTTPError as e:
+            print("OOPS!! HTTP Error")
+            print(str(e))
+            continue
         """
         otros = page2.findAll('div', attrs={'class': 'card-body'})
         if otros:

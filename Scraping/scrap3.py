@@ -6,14 +6,15 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 import time
 import requests
+from requests import ReadTimeout, HTTPError, Timeout, ConnectionError
 
 ubicacionD = "D:/NewEscritorio/memoria/ScraperMemoria/Scraping/chromedriver.exe"  # Ruta del driver
 driver = webdriver.Chrome(ubicacionD)
 home_link = "https://www.mercadolibre.cl/"
 seccion = "c/"
 maule = "nuevo-en-maule/"
-#categorias = ['agro', 'alimentos-y-bebidas', ]
-categorias = ['celulares-y-telefonia', 'computacion', 'electronica-audio-y-video', 'electrodomesticos', 'accesorios-para-vehiculos', 'consolas-y-videojuegos', 'arte-libreria-y-cordoneria','hogar-y-muebles', 'herramientas', 'animales-y-mascotas', 'belleza-y-cuidado-personal', 'vestuario-y-calzado', 'deportes-y-fitness', 'salud-y-equipamiento-medico', 'bebes']
+#categorias = []
+categorias = ['agro', 'alimentos-y-bebidas', 'celulares-y-telefonia', 'computacion', 'electronica-audio-y-video', 'electrodomesticos', 'accesorios-para-vehiculos', 'consolas-y-videojuegos', 'arte-libreria-y-cordoneria','hogar-y-muebles', 'herramientas', 'animales-y-mascotas', 'belleza-y-cuidado-personal', 'vestuario-y-calzado', 'deportes-y-fitness', 'salud-y-equipamiento-medico', 'bebes']
 marketPlaceFinal = "MercadoLibre"
 post = 'http://localhost:8000/api/public/postProducto'
 driver2 = webdriver.Chrome(ubicacionD)
@@ -106,8 +107,25 @@ for cat in categorias:
                                 "marketplace": marketPlaceFinal
                             }
                             #print(data)
-                            resp = requests.post(post, json=data)
-                            print(resp.json())
+                            try:
+                                resp = requests.post(post, json=data)
+                                print(resp.json())
+                            except requests.ConnectionError as e:
+                                print("OOPS!! Connection Error. Make sure you are connected to Internet. Technical Details given below.\n")
+                                print(str(e))
+                                continue
+                            except requests.Timeout as e:
+                                print("OOPS!! Timeout Error")
+                                print(str(e))
+                                continue
+                            except requests.RequestException as e:
+                                print("OOPS!! General Error")
+                                print(str(e))
+                                continue
+                            except requests.HTTPError as e:
+                                print("OOPS!! HTTP Error")
+                                print(str(e))
+                                continue
                     time.sleep(2)
                 next_btn = page2.find('a', attrs={'class': 'andes-pagination__link ui-search-link', 'title': 'Siguiente'})
                 #print(next_btn)
