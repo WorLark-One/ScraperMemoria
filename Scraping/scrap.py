@@ -15,7 +15,7 @@ home_link = "https://comunidadc.cl"
 search_link = '/vitrina/?_p=1&rows=&nombre=&idEmp=&catego=idReg%3B7&_o='
 driver.get(home_link + search_link)
 
-post = 'https://m-back-end-rpnra.ondigitalocean.app/api/public/postProducto'
+post = 'https://api.kmaule.store/api/public/postProducto'
 
 #wait = WebDriverWait(driver, 10)
 #original_window = driver.current_window_handle

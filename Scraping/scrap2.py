@@ -11,7 +11,7 @@ home_link2 = "https://www.marketmaule.cl"
 marketPlaceFinal = "marketmaule"
 search_link = 'alimentos-y-bebidas'
 categorias = ['agro', 'alimentos-y-bebidas', 'celulares-y-telefonia', 'computacion', 'electronica-audio-y-video', 'camaras-y-accesorios', 'electrodomesticos', 'artesania', 'autos-motos-y-otros', 'consolas-y-videojuegos', 'juegos-y-juguetes', 'libros-revistas-y-comics', 'hogar-y-muebles', 'herramientas-y-construccion', 'animales-y-mascotas', 'belleza-y-cuidado-personal', 'deportes-y-fitness', 'vestuario-y-calzado', 'relojes-y-joyas', 'arte-libreria-y-cordoneria', 'antiguedades-y-colecciones', 'bebes', 'bebidas/vinos-y-espumantes', 'bebidas/bebidas-blancas-y-licores', 'bebidas/cervezas']
-post = 'https://m-back-end-rpnra.ondigitalocean.app/api/public/postProducto'
+post = 'https://api.kmaule.store/api/public/postProducto'
 inicio = time.time()
 for cat in categorias:
     driver.get(home_link + cat)
